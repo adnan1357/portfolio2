@@ -34,16 +34,16 @@ export const Introduction = () => {
               My approach combines technical precision with creative problem-solving to deliver 
               robust, scalable solutions.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div 
-                className="bg-blue-50 dark:bg-gray-700 rounded-lg p-4 cursor-pointer hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors"
+                className="bg-blue-50 dark:bg-gray-700 rounded-lg p-6 cursor-pointer hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors h-full flex flex-col justify-between"
                 onClick={scrollToExperience}
               >
                 <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Experience</h3>
                 <p className="text-gray-600 dark:text-gray-300">3 years of technical excellence</p>
               </div>
               <div 
-                className="bg-blue-50 dark:bg-gray-700 rounded-lg p-4 cursor-pointer hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors"
+                className="bg-blue-50 dark:bg-gray-700 rounded-lg p-6 cursor-pointer hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors h-full flex flex-col justify-between"
                 onClick={scrollToEducation}
               >
                 <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Education</h3>

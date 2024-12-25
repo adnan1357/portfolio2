@@ -55,10 +55,23 @@ export const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', message: '', requestCV: false });
+      const response = await fetch('https://formspree.io/f/xbllddpo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          subject: formData.requestCV ? 'CV Request' : 'Contact Form Submission'
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '', requestCV: false });
+      } else {
+        setSubmitStatus('error');
+      }
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -75,6 +88,7 @@ export const ContactForm = () => {
         <input
           type="text"
           id="name"
+          name="name"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           className={`w-full px-4 py-2 rounded-lg border ${
@@ -91,6 +105,7 @@ export const ContactForm = () => {
         <input
           type="email"
           id="email"
+          name="email"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           className={`w-full px-4 py-2 rounded-lg border ${
@@ -106,6 +121,7 @@ export const ContactForm = () => {
         </label>
         <textarea
           id="message"
+          name="message"
           rows={4}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -120,6 +136,7 @@ export const ContactForm = () => {
         <input
           type="checkbox"
           id="requestCV"
+          name="requestCV"
           checked={formData.requestCV}
           onChange={(e) => setFormData({ ...formData, requestCV: e.target.checked })}
           className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { SkillCard } from './SkillCard';
+import { ClientProjects } from './ClientProjects';
 
 const skills = [
   {
@@ -61,6 +62,8 @@ export const Skills = () => {
             </motion.div>
           ))}
         </div>
+
+        <ClientProjects />
       </div>
     </section>
   );

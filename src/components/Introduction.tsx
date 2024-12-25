@@ -25,10 +25,14 @@ export const Introduction = () => {
               Hi, I'm Adnan 👋
             </h1>
             <h2 className="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-8">
-              Support Engineer
+              Support Engineer & Technical Specialist
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              I'm a dynamic Support Engineer with almost three years of experience in delivering exceptional client support and integration solutions. I specialize in cloud platforms and have a strong track record of solving complex technical challenges.
+              Passionate about bridging the gap between complex systems and seamless user experiences. 
+              With expertise in cloud platforms and integration solutions, I transform technical 
+              challenges into efficient, automated workflows that drive business success. 
+              My approach combines technical precision with creative problem-solving to deliver 
+              robust, scalable solutions.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
               <div 
@@ -36,7 +40,7 @@ export const Introduction = () => {
                 onClick={scrollToExperience}
               >
                 <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Experience</h3>
-                <p className="text-gray-600 dark:text-gray-300">3 years in technical support and integration</p>
+                <p className="text-gray-600 dark:text-gray-300">3 years of technical excellence</p>
               </div>
               <div 
                 className="bg-blue-50 dark:bg-gray-700 rounded-lg p-4 cursor-pointer hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors"

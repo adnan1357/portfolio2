@@ -56,33 +56,36 @@ export const Projects = () => {
   }, [activeProject]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">What I have worked on:</h2>
-      
-      <ProjectTabs
-        projects={projects}
-        activeProject={activeProject}
-        onTabChange={setActiveProject}
-      />
+    <section className="bg-gray-50 dark:bg-gray-900 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">
+          What I have worked on:
+        </h2>
+        
+        <ProjectTabs
+          projects={projects}
+          activeProject={activeProject}
+          onTabChange={setActiveProject}
+        />
 
-      <div className="flex justify-center">
-        <div 
-          ref={ref}
-          className="bg-white rounded-lg shadow-sm overflow-hidden w-full max-w-2xl animate-on-scroll"
-          style={{
-            opacity: inView ? 1 : 0,
-            transform: inView ? 'translateY(0)' : 'translateY(2rem)',
-            transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)'
-          }}
-        >
-          
-          <ProjectDetails
-            project={projects[activeProject]}
-            showDetails={showDetails}
-            onToggleDetails={() => setShowDetails(!showDetails)}
-          />
+        <div className="flex justify-center">
+          <div 
+            ref={ref}
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden w-full max-w-2xl"
+            style={{
+              opacity: inView ? 1 : 0,
+              transform: inView ? 'translateY(0)' : 'translateY(2rem)',
+              transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)'
+            }}
+          >
+            <ProjectDetails
+              project={projects[activeProject]}
+              showDetails={showDetails}
+              onToggleDetails={() => setShowDetails(!showDetails)}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

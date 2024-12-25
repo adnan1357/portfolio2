@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from './components/Header';
 import { Introduction } from './components/Introduction';
 import { Timeline } from './components/Timeline/Timeline';
+import { Education } from './components/Education/Education';
 import { Skills } from './components/Skills/Skills';
 import { Projects } from './components/Projects/Projects';
 import { ThemeToggle } from './components/ThemeToggle';
@@ -16,6 +17,7 @@ function App() {
         <Introduction />
         <Skills />
         <Timeline />
+        <Education />
         <Projects />
       </main>
       <ThemeToggle />

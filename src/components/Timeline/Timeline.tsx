@@ -35,21 +35,24 @@ export const Timeline = () => {
   });
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">My Journey</h2>
-      <div className="relative" ref={ref}>
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-blue-200" />
-        <div className="space-y-24">
-          {experiences.map((exp, index) => (
-            <TimelineItem
-              key={exp.id}
-              {...exp}
-              index={index}
-              isVisible={inView}
-            />
-          ))}
+    <section id="journey" className="bg-gray-50 dark:bg-gray-900 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">My Journey</h2>
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-16">A timeline of my professional experience</p>
+        <div className="relative" ref={ref}>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-blue-200 dark:bg-blue-800 hidden md:block" />
+          <div className="space-y-12 md:space-y-24">
+            {experiences.map((exp, index) => (
+              <TimelineItem
+                key={exp.id}
+                {...exp}
+                index={index}
+                isVisible={inView}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

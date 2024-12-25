@@ -2,6 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export const Introduction = () => {
+  const scrollToExperience = () => {
+    const experienceSection = document.getElementById('journey');
+    if (experienceSection) {
+      experienceSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="relative min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
@@ -17,7 +24,10 @@ export const Introduction = () => {
               I'm a dynamic Support Engineer with almost three years of experience in delivering exceptional client support and integration solutions. I specialize in cloud platforms and have a strong track record of solving complex technical challenges.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-              <div className="bg-blue-50 dark:bg-gray-700 rounded-lg p-4">
+              <div 
+                className="bg-blue-50 dark:bg-gray-700 rounded-lg p-4 cursor-pointer hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors"
+                onClick={scrollToExperience}
+              >
                 <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Experience</h3>
                 <p className="text-gray-600 dark:text-gray-300">3 years in technical support and integration</p>
               </div>

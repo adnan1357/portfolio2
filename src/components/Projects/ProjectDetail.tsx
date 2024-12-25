@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Project } from './types';
-import { X, ChevronRight, Lightbulb, Target, Rocket } from 'lucide-react';
+import { X, ChevronRight, Lightbulb, Target, Rocket, ArrowLeft } from 'lucide-react';
 
 interface ProjectDetailProps {
   project: Project;
@@ -31,6 +31,14 @@ export const ProjectDetail = ({ project, onClose }: ProjectDetailProps) => {
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
             >
               <X className="w-6 h-6" />
+            </button>
+            
+            <button
+              onClick={onClose}
+              className="absolute top-4 left-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 flex items-center gap-2"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              <span className="text-sm font-medium">Back</span>
             </button>
             
             <div className="h-64 relative">

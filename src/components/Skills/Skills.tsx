@@ -7,28 +7,28 @@ const skills = [
   {
     category: "Languages",
     items: [
-      { name: "JavaScript", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "Java", level: 75 },
-      { name: "SQL", level: 80 }
+      { name: "JavaScript" },
+      { name: "Python" },
+      { name: "Java" },
+      { name: "SQL" }
     ]
   },
   {
     category: "Cloud & DevOps",
     items: [
-      { name: "Azure", level: 85 },
-      { name: "AWS", level: 70 },
-      { name: "Docker", level: 75 },
-      { name: "CI/CD", level: 80 }
+      { name: "Azure" },
+      { name: "AWS" },
+      { name: "Docker" },
+      { name: "CI/CD" }
     ]
   },
   {
     category: "Tools & Frameworks",
     items: [
-      { name: "React", level: 85 },
-      { name: "Node.js", level: 80 },
-      { name: "Git", level: 85 },
-      { name: "REST APIs", level: 90 }
+      { name: "React" },
+      { name: "Node.js" },
+      { name: "Git" },
+      { name: "REST APIs" }
     ]
   }
 ];

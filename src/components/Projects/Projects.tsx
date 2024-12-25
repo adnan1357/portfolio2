@@ -8,7 +8,7 @@ import { Project } from './types';
 const projects: Project[] = [
   {
     id: 1,
-    title: "Automated onboarding system",
+    title: "Microsoft Automations",
     description: "Connected multiple services to via API's and Microsoft Power automate to automate the onboarding process",
     tags: ["Power Automate", "Azure", "API Integration"],
     details: [
@@ -56,7 +56,7 @@ export const Projects = () => {
   }, [activeProject]);
 
   return (
-    <section className="bg-gray-50 dark:bg-gray-900 py-20">
+    <section id="projects" className="bg-gray-50 dark:bg-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">
           What I have worked on:

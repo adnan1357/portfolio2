@@ -7,6 +7,7 @@ import { Skills } from './components/Skills/Skills';
 import { Projects } from './components/Projects/Projects';
 import { ThemeToggle } from './components/ThemeToggle';
 import { ScrollProgress } from './components/ScrollProgress';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Projects />
       </main>
       <ThemeToggle />
+      <Footer />
     </div>
   );
 }

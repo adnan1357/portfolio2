@@ -2,6 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export const Introduction = () => {
+  const scrollToEducation = () => {
+    const educationSection = document.getElementById('education');
+    if (educationSection) {
+      educationSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const scrollToExperience = () => {
     const experienceSection = document.getElementById('journey');
     if (experienceSection) {
@@ -31,7 +38,10 @@ export const Introduction = () => {
                 <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Experience</h3>
                 <p className="text-gray-600 dark:text-gray-300">3 years in technical support and integration</p>
               </div>
-              <div className="bg-blue-50 dark:bg-gray-700 rounded-lg p-4">
+              <div 
+                className="bg-blue-50 dark:bg-gray-700 rounded-lg p-4 cursor-pointer hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors"
+                onClick={scrollToEducation}
+              >
                 <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Education</h3>
                 <p className="text-gray-600 dark:text-gray-300">BSc Computer Science at City University</p>
               </div>
